@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: consul-one
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckInterval: 15s
+        instance-id: consul-one
+      enabled: true
+    config:
+      uri: http://localhost:1201/
+      profile: consul-one
+      label: master
+      enabled: true
+      format: YAML
+server:
+  port: 8501
